@@ -1,0 +1,19 @@
+{
+  "name": "projeto-genio",
+  "version": "1.0.0",
+  "description": "Projeto Genio dos Presentes",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "google",
+    "dialogflow"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

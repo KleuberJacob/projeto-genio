@@ -17,7 +17,7 @@ const {
   
   const app = dialogflow({debug: true});
 
-  app.intent('Basic Card', (conv) => {
+  app.intent('desire', (conv) => {
     if (!conv.screen) {
       conv.ask('Sorry, try this on a screen device or select the ' +
         'phone surface in the simulator.');
