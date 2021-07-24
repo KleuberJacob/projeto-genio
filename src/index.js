@@ -40,12 +40,13 @@ app.post('/', async (req, res, next) => {
               "items": [
                 {
                   "simpleResponse": {
-                    "textToSpeech": "Fraga só..."
+                    "displayText" : "Encontrei a melhor promoção neste site https://www.magazinevoce.com.br/magazinepromotopstore/",
+                    "textToSpeech": "Encontrei a melhor promoção neste site, vou te mostrar"
                   }
                 }, ...cards,
                 {
                     "simpleResponse": {
-                        "textToSpeech": "Qualquer coisa é só me chamar de novo. Fui!"
+                        "textToSpeech": "Qualquer coisa é só me chamar de novo... Fui!"
                       }
                 }                
               ]
