@@ -22,8 +22,7 @@ app.post('/', async (req, res, next) => {
         return {
           "basicCard": {
             "title": product.name,
-            "subtitle": product.name + product.price,
-            "formattedText": product.name + product.price,
+            "subtitle": product.price,
             "image": {
               "url": product.photo,
               "accessibilityText": "Foto do produto"
@@ -43,7 +42,7 @@ app.post('/', async (req, res, next) => {
                   "simpleResponse": {
                     "textToSpeech": "Fraga só..."
                   }
-                },...cards,
+                }, ...cards,
                 {
                     "simpleResponse": {
                         "textToSpeech": "Qualquer coisa é só me chamar de novo. Fui!"
