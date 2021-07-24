@@ -20,13 +20,16 @@ app.post('/', async (req, res, next) => {
 
     let cards = products.map(product => {
         return {
+          "basicCard": {
             "title": product.name,
-            "description": product.name,
-            "footer": product.price,
+            "subtitle": product.name + product.price,
+            "formattedText": product.name + product.price,
             "image": {
-                "url": product.photo,
-                "accessibilityText": "Foto do produto"
-            }
+              "url": product.photo,
+              "accessibilityText": "Foto do produto"
+            },
+            "imageDisplayOptions": "CROPPED"
+          }
         };
     });
 
@@ -40,12 +43,7 @@ app.post('/', async (req, res, next) => {
                   "simpleResponse": {
                     "textToSpeech": "Fraga só..."
                   }
-                },
-                {
-                    "carouselBrowse": {
-                        "items": cards
-                      }
-                },
+                },...cards,
                 {
                     "simpleResponse": {
                         "textToSpeech": "Qualquer coisa é só me chamar de novo. Fui!"
