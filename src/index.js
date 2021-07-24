@@ -21,9 +21,6 @@ app.post('/', async (req, res, next) => {
     let cards = products.map(product => {
         return {
             "title": product.name,
-            "openUrlAction": {
-                "url": product.link
-            },
             "description": product.name,
             "footer": product.price,
             "image": {
